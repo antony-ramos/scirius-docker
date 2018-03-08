@@ -9,7 +9,7 @@ RUN wget -O stamus.key -q http://packages.stamus-networks.com/packages.stamus-ne
 RUN apt-key add stamus.key
 RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y suricata
-RUN wget https://github.com/StamusNetworks/scirius/archive/scirius-${VERSION}.tar.gz
+RUN wget https://github.com/antony-ramos/scirius/archive/scirius-${VERSION}.tar.gz
 RUN mkdir -p /opt/selks/sciriusdata
 WORKDIR /opt/selks
 RUN tar zxf /tmp/scirius-${VERSION}.tar.gz
